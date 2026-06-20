@@ -4,5 +4,6 @@
 ## Author: tek
 ## Version: 1.0
 ## SavedVariables: RaidNamesCopyDB
+## X-Curse-Project-ID: 1582445
 
 RaidNamesCopy.lua
