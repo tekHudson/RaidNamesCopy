@@ -1,0 +1,8 @@
+## Interface: 11507
+## Title: Raid Names Copy
+## Notes: One click on the minimap button copies every raid member's name, ready to paste.
+## Author: tek
+## Version: 1.0
+## SavedVariables: RaidNamesCopyDB
+
+RaidNamesCopy.lua

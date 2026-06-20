@@ -1,0 +1,25 @@
+name: Package and release
+
+on:
+  push:
+    tags:
+      - "**"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone project
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Package and release
+        uses: BigWigsMods/packager@master
+        env:
+          # Auto-provided by GitHub: creates the GitHub Release + attaches the zip.
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+          # Optional: add these repo secrets to also publish to CurseForge / WoWInterface / Wago.
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+          WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
+          WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
